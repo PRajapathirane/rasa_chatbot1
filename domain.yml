@@ -1,0 +1,126 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - search_provider
+  - thanks
+  - weather
+  - city
+  - news_updates
+  - bored
+  - channel_entry
+  - category_entry
+
+entities:
+  - location
+  - facility_type
+  - news_category
+  - news_channel
+  - address
+
+slots:
+  location:
+    type: text
+  facility_type:
+    type: text
+  address:
+    type: unfeaturized
+  news_channel:
+    type: unfeaturized
+  news_category:
+    type: unfeaturized
+
+forms:
+- news_form
+    # required_slots:
+    #   news_channel:
+    #    - type: from_text
+    #      #entity: news_channel
+    #   news_category:
+    #    - type: from_text
+    #      #entity: news_category
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_how_can_i_help
+- utter_ask_location
+- action_facility_search
+- utter_city
+- utter_temp
+- action_weather
+# - provide_news
+- entertain_user
+- utter_entertainment_news
+- utter_ask_channel
+- utter_ask_category
+- utter_slot_values
+- utter_submit
+#- news_form
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you today"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_how_can_i_help:
+  - text: "How can I help you today?"
+  #- text: "Hello, I am a medicare locator. I can help you find nearest hospital. How can I help?"
+
+  utter_ask_location:
+  - text: "Can you provide your location please?"
+  #- text: "To find the nearest {facility_type} I need your location "
+  
+  utter_city:
+  - text: "Which city do you want to check the weather forecast?"
+  
+  utter_temp:
+  - text: "Today's temperature is {temp}"
+
+  utter_ask_news_channel:
+  - text: "Which channel do you prefer? CNN or BBC?"
+
+  utter_ask_news_category:
+  - text: "Do you want sports, business or technology related news?"
+
+  utter_entertainment_news:
+  - text: "{title}
+            Visit: {url} for more information"
+  
+  utter_submit:
+  - text: "Thanks!"
+
+  utter_slot_values: 
+  - text: "Fetching news from {news_channel} related to {news_category}"
+  
+  utter_bugger_off:
+  - text: "That's too bad. Bye!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,232 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Yo!
+    - what up baby 
+    - buenos dias 
+
+- intent: bored
+  examples: |
+    - I'm bored
+    - Tell me something interesting
+    - Entertain me
+    - bored I am 
+    - BOOOOOORREDD :(
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - buenos noches
+    - tata
+    - cayonara
+
+- intent: weather
+  examples: |
+    - whats the weather?
+    - weather please
+    - tell whether forecast
+    - hows the weather today
+    - tell me the weather
+
+- intent: city
+  examples: |
+    - Delhi
+    - delhi 
+    - chandigarh
+    - mohali
+    - mumbai
+
+- intent: inform
+  examples: |
+    - [Sitka]{"entity":"location"}
+    - [Juneau]{"entity":"location"}
+    - [Virginia]{"entity":"location"}
+    - [Cusseta]{"entity":"location"}
+    - [Chicago]{"entity":"location"}
+    - [Tuscon]{"entity":"location"}
+    - [Colombus]{"entity":"location"}
+    - [San Francisco]{"entity":"location"}
+    - [New York]{"entity":"location"}
+    - [Pasadena]{"entity":"location"}
+    - [Pawnee]{"entity":"location"}
+    - [Illinois]{"entity":"location"}
+    - [Los Angeles]{"entity":"location"}
+    - [Houston]{"entity":"location"}
+    - [Phoenix]{"entity":"location"}
+    - [Philadelphia]{"entity":"location"}
+    - [New Orleans]{"entity":"location"}
+    - [Tampa]{"entity":"location"}
+    - [Wichita]{"entity":"location"}
+    - [Modesto]{"entity":"location"}
+    - [Cleveland]{"entity":"location"}
+    - [Wisconsin]{"entity":"location"}
+    - [Vancouver]{"entity":"location"}
+
+- intent: search_provider
+  examples: |
+    - I need a [hospital]{"entity":"facility_type"}
+    - find me a nearby [hospital]{"entity":"facility_type"}
+    - show me [home health agencies]{"entity":"facility_type"}
+    - [hospital]{"entity":"facility_type"}
+    - find me a nearby [hospital]{"entity":"facility_type"} in [San Francisco]{"entity":"location"}
+    - I need [home health agency]{"entity":"facility_type"}
+    - [Nursing homes]{"entity":"facility_type"} near me
+    - find a [nursing home]{"entity":"facility_type"} in [Pawnee]{"entity":"location"}
+    - [hospitals]{"entity":"facility_type"} near me 
+    - [Home Health Agencies]{"entity":"facility_type"} in [Sitka]{"entity":"location"}
+    - I need a [hospital]{"entity":"facility_type"}
+    - find me a nearby [hospital]{"entity":"facility_type"}
+    - show me [home health agencies]{"entity":"facility_type"}
+    - [hospital]{"entity":"facility_type"}
+    - find me a nearby [hospital]{"entity":"facility_type"} in [San Francisco]{"entity":"location"}
+    - I need [home health agency]{"entity":"facility_type"}
+    - [Nursing homes]{"entity":"facility_type"} near me
+    - find a [nursing home]{"entity":"facility_type"} in [Pawnee]{"entity":"location"}
+    - [hospitals]{"entity":"facility_type"} near me 
+    - [Home Health Agencies]{"entity":"facility_type"} in [Sitka]{"entity":"location"}
+  
+# - intent: corona_updates
+#   examples: |
+#     - tell me the covid situation
+#     - how severe is the corona virus
+#     - whats the current corona virus situation in the world
+
+- intent: news_updates
+  examples: |
+    - tell me the latest news
+    - whats happening in the world
+    - any breaking news?
+    - news please
+    - whats in the news
+    - news headlines
+    - News updates
+
+   # - latest news in [BBc]{"entity":"news_channel"}
+      # - give me the headlines of [CNN]{"entity":"news_channel"}
+      # - what is the latest in [tech]{"entity":"news_category"}
+      # - tell me the [sports]{"entity":"news_category"} news in [bbc]{"entity":"news_channel"}
+      # - any exciting findings in the [tech]{"entity":"news_category"} industry?
+      # - whats happening in the [business]{"entity":"news_category"} world?
+      # - give me [business]{"entity":"news_category"} updates from [Cnn]{"entity":"news_channel"}
+      # - I want to know whats happening in the [business]{"entity":"news_category"} sector
+      # - latest in [sports]{"entity":"news_category"}
+      # - give me [sports]{"entity":"news_category"} news from [cnn]{"entity":"news_channel"}
+      # - [sports]{"entity":"news_category"} headlines from [bbc]{"entity":"news_channel"}
+      # - i need to know the latest in the [business]{"entity":"news_category"} industry
+      # - [tech]{"entity":"news_category"} world updates
+      # - upcoming trends in the [tech]{"entity":"news_category"} industry
+      # - give me news updates from [BBc]{"entity":"news_channel"}
+      # - latest news from [cnN]{"entity":"news_channel"}
+
+- intent: channel_entry
+  examples: |
+    - [bbc]{"entity":"news_channel"}
+    - [cnn]{"entity":"news_channel"}
+  # - [BBc]{"entity":"news_channel"}
+  # - [BBC]{"entity":"news_channel"}
+    
+  # - [CNN]{"entity":"news_channel"}
+  # - [CNn]{"entity":"news_channel"} 
+
+- intent: category_entry
+  examples: |
+    - [tech]{"entity":"news_category"}
+    - [business]{"entity":"news_category"}
+    - [sports]{"entity":"news_category"}
+  # - Sports{"entity":"news_category"}
+  # - [Business]{"entity":"news_category"}
+  # - [Tech]{"entity":"news_category"}
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+  
+- intent: thanks
+  examples: |
+    - Thank you so much
+    - thanks alot!
+    - that was really helpful, thanks
+
+# - regex: location
+# - \b\d{5}\b
